@@ -16,8 +16,8 @@ node* getNode(sinhVien info)
 	}
 	else
 	{
-		strcpy(p->info.name, info.name);
-		strcpy(p->info.className, info.className);
+		p->info.name = _strdup(info.name);
+		p->info.className = _strdup(info.className);
 		p->info.birthyear = info.birthyear;
 		p->info.gpa = info.gpa;
 		p->info.id = info.id;
@@ -107,8 +107,11 @@ double maxGPA(list l)
 		node* p = maxNode->pNext;
 		while (p != NULL)
 		{
-			if (maxNode->info.gpa < p->info.gpa);
-			maxNode = p;
+			if (maxNode->info.gpa < p->info.gpa)
+			{
+				maxNode = p;
+			}
+
 			p = p->pNext;
 		}
 		return maxNode->info.gpa;
@@ -118,8 +121,8 @@ double maxGPA(list l)
 sinhVien copySinhVien(sinhVien info)
 {
 	sinhVien newSV;
-	newSV.name = strdup(info.name);
-	newSV.className = strdup(info.className);
+	newSV.name = _strdup(info.name);
+	newSV.className = _strdup(info.className);
 	newSV.gpa = info.gpa;
 	newSV.birthyear = info.birthyear;
 	newSV.id = info.id;
@@ -136,8 +139,7 @@ list maxGPAList(list l)
 		if (p->info.gpa == maxgpa)
 		{
 			sinhVien info = copySinhVien(p->info);
-			addLast(l, info);
-			
+			addLast(newL, info);
 		}
 		p = p->pNext;
 	}
