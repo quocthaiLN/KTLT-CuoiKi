@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
@@ -46,3 +46,11 @@ void readTextFile(list& l, const char* filePath);
 void writeBinaryFile(list l, const char* filePath);
 void readBinaryFile(list& l, const char* filePath);
 
+int tongDayDeQuy(int a, int n);
+int tongDayKhongDeQuy(int a, int n);
+int timN(int a, int M);
+
+int* inputArr(int &n);
+void outputArr(int* arr, int n);
+void findNum(int* arr, int n, int& a, int& b);
+//Còn bài số 5 chưa hiểu đề

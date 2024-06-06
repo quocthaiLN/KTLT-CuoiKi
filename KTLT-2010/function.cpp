@@ -36,7 +36,7 @@ sinhVien inputSV()
 	cin.ignore();
 	cin.getline(sv.name, MAXNAMELEN);
 	cout << "Class name: ";
-	cin.ignore();
+	//cin.ignore();
 	cin.getline(sv.className, MAXNAMECLASSLEN);
 	cout << "GPA: ";
 	cin >> sv.gpa;
@@ -121,8 +121,12 @@ double maxGPA(list l)
 sinhVien copySinhVien(sinhVien info)
 {
 	sinhVien newSV;
-	newSV.name = _strdup(info.name);
-	newSV.className = _strdup(info.className);
+	newSV.name = new char[MAXNAMELEN];
+	newSV.className = new char[MAXNAMECLASSLEN];
+	/*newSV.name = _strdup(info.name);
+	newSV.className = _strdup(info.className);*/
+	strcpy(newSV.name, info.name);
+	strcpy(newSV.className, info.className);
 	newSV.gpa = info.gpa;
 	newSV.birthyear = info.birthyear;
 	newSV.id = info.id;
@@ -172,7 +176,7 @@ void sort(list& l)
 			}
 			q = q->pNext;
 		}
-		swap(p, minNode);
+		swapSV(p->info, minNode->info);
 		p = p->pNext;
 	}
 }
@@ -214,7 +218,7 @@ void readTextFile(list& l, const char* filePath)
 		return;
 	}
 	l = initList();
-	while (ifs.good())
+	while (ifs.eof() == false)
 	{
 		char* line = new char[100];
 		ifs >> line;
@@ -285,3 +289,95 @@ void readBinaryFile(list& l, const char* filePath)
 	}
 	ifs.close();
 }
+
+int tongDayDeQuy(int a, int n)
+{
+	if (n == 0)
+	{
+		return a;
+	}
+	else if (n == 1)
+	{
+		return 2 * a;
+	}
+	else
+	{
+		return 2 * tongDayDeQuy(a, n - 1) + 3 * tongDayDeQuy(a, n - 2);
+	}
+}
+
+int tongDayKhongDeQuy(int a, int n)
+{
+	int sum = 0, f0 = a, f1 = 2 * a;
+	if (n == 1)
+	{
+		return f1;
+	}
+	else if (n == 0)
+	{
+		return f0;
+	}
+	else
+	{
+		for (int i = 2; i <= n; i++)
+		{
+			sum = 2 * f1 + 3 * f0;
+			f0 = f1;
+			f1 = sum;
+		}
+	}
+	return sum;
+}
+
+int timN(int a, int M)
+{
+	int n = 0;
+	for (n; tongDayDeQuy(a, n) < M; n++);
+	return n;
+}
+
+int* inputArr(int& n)
+{
+	cout << "Nhap n: ";
+	cin >> n;
+	int* arr = new int[n];
+	for (int i = 0; i < n; i++)
+	{
+		cout << "Arr[" << i << "]: ";
+		cin >> arr[i];
+	}
+	return arr;
+}
+
+void outputArr(int* arr, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << "Arr[" << i << "]: " << arr[i] << endl;
+	}
+}
+
+void findNum(int* arr, int n, int& a, int& b)
+{
+	a = arr[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (arr[i] > a)
+		{
+			a = arr[i];
+		}
+	}
+
+	b = arr[n - 2];
+	for (int i = n - 2; i > 0; i--)
+	{
+		if (arr[i] > b && arr[i] < a)
+		{
+			b = arr[i];
+		}
+	}
+}
+
+
+
+
