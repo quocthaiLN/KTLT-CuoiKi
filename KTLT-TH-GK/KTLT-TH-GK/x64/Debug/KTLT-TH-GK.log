@@ -1,0 +1,7 @@
+﻿  KTLT-TH-GK.cpp
+  function.cpp
+C:\Users\ASUS\Desktop\KTLT-DeCuoiKi\KTLT-TH-GK\function.cpp(7,8): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\ASUS\Desktop\KTLT-DeCuoiKi\KTLT-TH-GK\function.cpp(8,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\ASUS\Desktop\KTLT-DeCuoiKi\KTLT-TH-GK\function.cpp(16,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  KTLT-TH-GK.vcxproj -> C:\Users\ASUS\Desktop\KTLT-DeCuoiKi\KTLT-TH-GK\x64\Debug\KTLT-TH-GK.exe
