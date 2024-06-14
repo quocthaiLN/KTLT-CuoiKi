@@ -24,9 +24,9 @@ struct list
 	node* pHead;
 };
 
-bool compareLists(list l1, list l2);
 bool isSymmetric(list& l);
 list initList();
+void addHead(list& l, int data);
 void addLast(list& l, int data);
 void inputList(list& l);
 void outputList(list l);

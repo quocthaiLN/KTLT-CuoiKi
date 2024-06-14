@@ -1,4 +1,4 @@
-#include "function.h"
+﻿#include "function.h"
 
 
 int countDigit(int N)
@@ -36,26 +36,18 @@ char* toBitString(int N)
 	return str;
 }
 
-bool compareLists(list l1, list l2)
+void addHead(list& l, int data)
 {
-	if (sizeList(l1) != sizeList(l2))
+	node* p = getNode(data);
+	if (l.pHead == NULL)
 	{
-		return false;
+		l.pHead = p;
 	}
-
-	node* p1 = l1.pHead, *p2 = l2.pHead;
-	while (p1 != NULL)
+	else
 	{
-		if (p1->data != p2->data)
-		{
-			return false;
-		}
-		p1 = p1->next;
-		p2 = p2->next;
+		p->next = l.pHead;
+		l.pHead = p;
 	}
-	return true;
-
-
 }
 
 bool isSymmetric(list& l)
@@ -66,28 +58,36 @@ bool isSymmetric(list& l)
 		return false;
 	}
 
-	list check1 = initList();
+	list l1 = initList();
+
 	node* p = l.pHead;
 	for (int i = 0; i < size / 2; i++)
 	{
-			addLast(check1, p->data);
-			p = p->next;
+		addHead(l1, p->data);
+		p = p->next;
+		
 	}
 	if (size % 2 == 1)
 	{
 		p = p->next;
-	}	
-	
-	list check2 = initList();
-	while (p != NULL)
+	}
+
+	node* q = l1.pHead;
+	while (q != NULL)
 	{
-		addLast(check2, p->data);
+		if (q->data != p->data)
+		{
+			return false;
+		}
+		q = q->next;
 		p = p->next;
 	}
 
-	return compareLists(check1, check2);
-
+	return true;
 }
+
+
+
 list initList()
 {
 	list l;
@@ -173,3 +173,5 @@ node* getNode(int data)
 	}
 	return p;
 }
+
+//Câu 3 - Liên qua đến lập trình động, thuật toán tham lam, Câu 4 - Chưa làm đã biết khó - quá khó
