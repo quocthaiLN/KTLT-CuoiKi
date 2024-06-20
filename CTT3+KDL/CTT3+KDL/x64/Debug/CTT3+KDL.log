@@ -1,0 +1,7 @@
+﻿  function.cpp
+C:\Users\ASUS\source\repos\CTT3+KDL\function.cpp(99,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ASUS\source\repos\CTT3+KDL\function.cpp(99,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ASUS\source\repos\CTT3+KDL\function.cpp(99,57): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ASUS\source\repos\CTT3+KDL\function.cpp(105,11): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Users\ASUS\source\repos\CTT3+KDL\function.cpp(115,11): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  CTT3+KDL.vcxproj -> C:\Users\ASUS\source\repos\CTT3+KDL\x64\Debug\CTT3+KDL.exe

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CTT5", "CTT5.vcxproj", "{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}.Debug|x64.ActiveCfg = Debug|x64
+		{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}.Debug|x64.Build.0 = Debug|x64
+		{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}.Debug|x86.ActiveCfg = Debug|Win32
+		{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}.Debug|x86.Build.0 = Debug|Win32
+		{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}.Release|x64.ActiveCfg = Release|x64
+		{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}.Release|x64.Build.0 = Release|x64
+		{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}.Release|x86.ActiveCfg = Release|Win32
+		{5FC4C67F-A1A8-4E13-A8C5-4F10E8FAC263}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD446156-A9A4-4574-B2D7-0DFC87BFA0A6}
+	EndGlobalSection
+EndGlobal
