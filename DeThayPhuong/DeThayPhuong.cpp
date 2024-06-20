@@ -1,20 +1,36 @@
-// DeThayPhuong.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include "function.h"
 
-#include <iostream>
-
-int main()
+void hailstone(int i);
+void hailstone(int i)
 {
-    std::cout << "Hello World!\n";
+	if (i == 1)
+	{
+		cout << i;
+		return;
+	}
+	else
+	{
+		if (i % 2 == 0)
+		{
+			cout << i << " ";
+			hailstone(i / 2);
+		}
+		else
+		{
+			cout << i << " ";
+			hailstone(i * 3 + 1);
+		}
+	}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+int main() {
+	int A[] = { 1, 3, 0, 9, 1 };
+	int nA = 5;
+	int B[] = { 1, 3, 0, 9, 5 };
+	int nB = 5;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	int lengthLCS = longestCommonSubsequence(A, nA, B, nB);
+	std::cout << "Do dai cua day con chung dai nhat (LCS) la: " << lengthLCS << std::endl;
+
+	return 0;
+}

@@ -1,0 +1,7 @@
+﻿  CTT5.cpp
+  function.cpp
+  Generating Code...
+  LINK : C:\Users\ASUS\Desktop\KTLT-DeCuoiKi\CTT5\x64\Debug\CTT5.exe not found or not built by the last incremental link; performing full link
+function.obj : error LNK2005: "int __cdecl FxBC(int &)" (?FxBC@@YAHAEAH@Z) already defined in CTT5.obj
+function.obj : error LNK2005: "int __cdecl FxBL(int &)" (?FxBL@@YAHAEAH@Z) already defined in CTT5.obj
+C:\Users\ASUS\Desktop\KTLT-DeCuoiKi\CTT5\x64\Debug\CTT5.exe : fatal error LNK1169: one or more multiply defined symbols found
