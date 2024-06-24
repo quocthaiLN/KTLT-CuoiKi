@@ -137,20 +137,20 @@ void mergeLists(list x, list y, list& z)
 			py = py->next;
 		}
 	}
-		if (px == NULL && py != NULL)
+	if (px == NULL && py != NULL)
+	{
+		while (py != NULL)
 		{
-			while (py != NULL)
-			{
-				addLast(z, py->data);
-				py = py->next;
-			}
+			addLast(z, py->data);
+			py = py->next;
 		}
-		else if(py == NULL && px != NULL)
+	}
+	else if(py == NULL && px != NULL)
+	{
+		while(px!= NULL)
 		{
-			while(px!= NULL)
-			{
-				addLast(z, px->data);
-				px = px->next;
+			addLast(z, px->data);
+			px = px->next;
 		}
 	}
 }

@@ -58,7 +58,7 @@ void addLast(list& l, int value);
 int sizeList(list l);
 
 //Câu 3:
-//a. 30 50
+//a. 35 50
 //b. chương trình không xảy ra lỗi và danh sách bớt đi node cuối, node* tail đc giải phóng
 
 node* getMinNode(node* head, node* tail);

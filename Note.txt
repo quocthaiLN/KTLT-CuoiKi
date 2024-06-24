@@ -1,3 +1,11 @@
 - Câu cuối đề CTT2 không hiểu bị lỗi gì
 - Đề CTT3+KDL: chưa tự code được hàm replace
-- Câu chia tiền Thắng có giải thử xem thêm
+- Câu chia tiền Thắng có giải thử xem them
+
+
+
+
+
+
+- CTT2: 1 + 4
+- 
